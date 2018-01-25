@@ -1,11 +1,11 @@
-os.chdir('C:\\Users\\TapperR\\Desktop\\pkr\\Poker\\poker')
+
+os.chdir('C:\\Users\\TapperR\\Desktop\\pkr\\Poker')
 import matplotlib
 import pandas as pd
 import time
 import numpy as np
 
 matplotlib.use('Qt5Agg')
-import os
 # os.environ['KERAS_BACKEND']='theano'
 import logging.handlers
 import pytesseract
@@ -221,11 +221,11 @@ class ThreadManager(threading.Thread):
 # ==== MAIN PROGRAM =====
 
 def run_poker():
-    fh = logging.handlers.RotatingFileHandler('log/pokerprogram.log', maxBytes=1000000, backupCount=10)
+    fh = logging.handlers.RotatingFileHandler('poker/log/pokerprogram.log', maxBytes=1000000, backupCount=10)
     fh.setLevel(logging.DEBUG)
-    fh2 = logging.handlers.RotatingFileHandler('log/pokerprogram_info_only.log', maxBytes=1000000, backupCount=5)
+    fh2 = logging.handlers.RotatingFileHandler('poker/log/pokerprogram_info_only.log', maxBytes=1000000, backupCount=5)
     fh2.setLevel(logging.INFO)
-    er = logging.handlers.RotatingFileHandler('log/errors.log', maxBytes=2000000, backupCount=2)
+    er = logging.handlers.RotatingFileHandler('poker/log/errors.log', maxBytes=2000000, backupCount=2)
     er.setLevel(logging.WARNING)
     ch = logging.StreamHandler(sys.stdout)
     ch.setLevel(logging.WARNING)

@@ -16,10 +16,13 @@ from configobj import ConfigObj
 from pymongo import MongoClient
 
 
+
 class UpdateChecker():
     def __init__(self):
         self.mongoclient = MongoClient('mongodb://guest:donald@dickreuter.com:27017/POKER')
+        #mongoclient = MongoClient('mongodb://guest:donald@dickreuter.com:27017/POKER')
         self.mongodb = self.mongoclient.POKER
+        #mongodb = mongoclient.POKER
 
     def downloader(self):
         self.file_name = "Pokerbot_installer.exe"
@@ -41,8 +44,12 @@ class UpdateChecker():
                     sys.stdout.flush()
 
     def check_update(self, version):
+        #version = 3.04
         cursor = self.mongodb.internal.find()
+        #cursor = mongodb.internal.find()
         c = cursor.next()
+        
+        
         current_version = c['current_version']
         self.dl_link = c['dl']
         latest_updates = c['latest_updates']
