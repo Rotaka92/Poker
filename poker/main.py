@@ -1,5 +1,7 @@
+import os
+#os.chdir('C:\\Users\\TapperR\\Desktop\\pkr\\Poker')
+os.chdir('C:\\Users\\Robin\\Desktop\\pkr\\Poker')
 
-os.chdir('C:\\Users\\TapperR\\Desktop\\pkr\\Poker')
 import matplotlib
 import pandas as pd
 import time
@@ -26,7 +28,6 @@ from poker.tools.mouse_mover import MouseMoverTableBased
 
 
 version = 3.05
-
 
 
 
